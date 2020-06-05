@@ -12,7 +12,6 @@ nora_dir = Path("/media/nora/work")
 
 data_dict = {"patient": [], "study": [], "hash": []}
 new_project_dir = nora_dir / work_dir.name
-#print(new_project_dir)
 new_project_dir.mkdir(exist_ok=True)
 
 csv_filename = str(work_dir.name) + "_pat_data_mask.csv"
@@ -59,7 +58,7 @@ def process_study(study_dir, log_file, study_hash, out_dir):
             else:
                 shutil.copy(files[key], out_file)
 
-            if not key == "mask":
+            if not files[key].suffix == ".gz":
                 subprocess.call(["gzip", out_file])
         return True
 
@@ -97,4 +96,3 @@ df = pd.DataFrame.from_dict(data_dict)
 df.to_csv(out_file_csv)
 
 subprocess.call(["cat", "/home/rakerbb1/test.txt"])
-
