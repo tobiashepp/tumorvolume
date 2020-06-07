@@ -38,13 +38,13 @@ for archive in project_archives:
             files["mask"].append(pet.replace("petsuv", "mask"))
 
         for key in files:
-            for file in files[key][:1]:
+            for file in files[key]:
                 file_path = Path(file)
                 item = file_path.name
                 if key == "petsuv":
                     patient = str(file_path.parent).split("/")[-1]
                     print(patient)
-                    new_pat_dir = interim_dir/patient
+                    new_pat_dir = new_project_dir/patient
                     new_pat_dir.mkdir(exist_ok=True)
                 with zf.open(file, "r") as zfile:
                     gzfile = gzip.GzipFile(fileobj=BytesIO(zfile.read()), mode="rb")
