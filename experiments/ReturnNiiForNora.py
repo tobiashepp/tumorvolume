@@ -3,8 +3,9 @@ import subprocess
 import nibabel as nib
 from pathlib import Path
 
+
 def nifti2nora(directory=None, nii_filepath=None, array=None, affine=None, fname=None,
-               dname = "SHOW_NII_0000000000", sid = "0000000000_20200101", project = "INBOX"):
+               dname="SHOW_NII_0000000000", sid="0000000000_20200101", project="INBOX"):
     files_to_add = ":\n"
 
     inbox_dir_str = "/media/nora/imgdata/" + project + "/" + dname
@@ -41,6 +42,7 @@ def nifti2nora(directory=None, nii_filepath=None, array=None, affine=None, fname
     print(msg)
     subprocess.call(["nora", "-p", project, "--add", inbox_dir_name_sid])
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dir', help='directory containing .nii', default=None)
@@ -48,23 +50,23 @@ def main():
     parser.add_argument('--arr', help='array to construct a .nii', default=None)
     parser.add_argument('--aff', help='affine to construct a .nii', default=None)
     parser.add_argument('--fname', help='filename to save constructed .nii', default=None)
-    parser.add_argument('--dname', help='dummy name for nora: name_name_id', default= "KerberB_Test_0000000000")
-    parser.add_argument('--sid', help='dummy study-id for nora: id_yyyymmdd', default= "00000000000_20200101")
-    parser.add_argument('--prj', help='nora-directory to upload to', default= "INBOX")
-
+    parser.add_argument('--dname', help='dummy name for nora: name_name_id', default="KerberB_Test_0000000000")
+    parser.add_argument('--sid', help='dummy study-id for nora: id_yyyymmdd', default="00000000000_20200101")
+    parser.add_argument('--prj', help='nora-directory to upload to', default="INBOX")
 
     args = parser.parse_args()
     directory = args.dir
     nii_filepath = args.nii
     array = args.arr
-    affine=args.aff
-    fname=args.fname
-    dname=args.dname
-    sid=args.sid
-    project=args.prj
+    affine = args.aff
+    fname = args.fname
+    dname = args.dname
+    sid = args.sid
+    project = args.prj
 
     nifti2nora(directory=directory, nii_filepath=nii_filepath, array=array, affine=affine, fname=fname,
                dname=dname, sid=sid, project=project)
+
 
 if __name__ == '__main__':
     main()

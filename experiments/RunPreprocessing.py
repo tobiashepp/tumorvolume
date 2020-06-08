@@ -7,23 +7,24 @@ from io import BytesIO
 from zipfile import ZipFile
 import gzip
 from pathlib import Path
-
-raw_dir = Path("/mnt/qdata/raheppt1/data/tumorvolume/raw")
-
-project_archives = ["TUE1001LYMPH.zip"]  # str
-# ["TUE0001PETBC.zip", "TUE1001LYMPH.zip", "TUE1003MELPE.zip"]
-
-interim_dir = Path("/mnt/qdata/raheppt1/data/tumorvolume/interim")
+import argparse
 
 
-# the ziparchive used was created on another disk thus saving the old filepaths.
-# We need to change the filepath to store the resampled images.
+def run_preprocessing(archive, destination_dir):
+    """
+    Reads nii.gz-files in a ziparchive archive and resamples the images, storing them as nii.gz in the destination_dir.
+    Args:
+        archive:
+        destination_dir:
 
+    Returns:
 
-for archive in project_archives:
-    file = raw_dir/archive
+    """
+
+    out_dir = Path(destination_dir)
+    file = Path(archive)
     project_name = file.stem
-    new_project_dir = interim_dir/project_name
+    new_project_dir = out_dir/project_name
     new_project_dir.mkdir(exist_ok=True)
     with ZipFile(file, "r") as zf:
         # Get a list of all directories and files stored in zip archive
@@ -38,9 +39,8 @@ for archive in project_archives:
             files["mask"].append(pet.replace("petsuv", "mask"))
 
         for key in files:
-            for file in files[key][:5]:
+            for file in files[key][:2]:
                 file_path = Path(file)
-                item = file_path.name
                 patient = str(file_path.parent).split("/")[-1]
                 new_pat_dir = new_project_dir / patient
                 print(patient)
@@ -79,3 +79,19 @@ for archive in project_archives:
                         outfile = new_pat_dir/resampled_filename
                         nib.save(resampled_lbl, outfile)
                         subprocess.call(["gzip", outfile])
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--arc", help="zip-archive with nii.gz-images", required=True)
+    parser.add_argument("--dst", help="output directory", required=True)
+
+    args = parser.parse_args()
+    archive = args.arc
+    destination_dir = args.dst
+
+    run_preprocessing(archive=archive, destination_dir=destination_dir)
+
+
+if __name__ == '__main__':
+    main()
