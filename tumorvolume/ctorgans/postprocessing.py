@@ -55,17 +55,17 @@ def fill_holes(one_hot_mask):
     return np.stack(pp_mask, axis=0)
 
 
-def one_hot_encoded(categorial_mask):
+def one_hot_encoded(categorial_mask, C):
     """Convert categorial encoding to binary one hot encoding.
     
     Args:
         categorial_mask (np.array): mask label HxWxD
+        C (int): number of classes
 
      Returns:
         np.array:  one_hot_mask (CxHxWxD)
     """
-    num_classes = categorial_mask.max() + 1
-    return np.eye(num_classes)[categorial_mask].transpose([3,0,1,2])
+    return np.eye(C)[categorial_mask].transpose([3,0,1,2])
 
 
 @click.command()
