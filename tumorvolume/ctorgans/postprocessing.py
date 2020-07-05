@@ -6,11 +6,10 @@ import zarr
 import click
 import numpy as np
 from dotenv import load_dotenv
-load_dotenv()
 from p_tqdm import p_map
 from skimage.measure import label 
 from scipy.ndimage.morphology import binary_fill_holes
-
+load_dotenv()
 
 def largest_component(one_hot_mask):
     """Select the largest connected component for each channel of the mask.
