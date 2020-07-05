@@ -1,5 +1,6 @@
 import os
 import matplotlib
+import zipfile
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from os.path import basename
@@ -148,7 +149,7 @@ def analysis(prediction_path, data_path, jobs):
     # zip results 
     print('zipping results ...')
     zip_path = work_dir/'processed/ctorgans'/f'{prediction_path.stem}_png.zip'
-    with ZipFile(zip_path, 'a') as zipf:
+    with ZipFile(zip_path, 'w', compression=zipfile.ZIP_LZMA) as zipf:
         for folder, subfolders, filenames in os.walk(out_dir):
             for filename in filenames:
                 p = os.path.join(folder, filename)
