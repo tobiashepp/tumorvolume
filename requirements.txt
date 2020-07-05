@@ -11,7 +11,7 @@ p_tqdm
 loguru
 torch 
 torchvision
-searborn
+seaborn
 python-dotenv
 # midas-lab gitub
 # mednet 
