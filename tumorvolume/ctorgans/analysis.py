@@ -58,32 +58,32 @@ def analysis(prediction_path, data_path, jobs):
         mask_liver = one_hot_mask[1]
         mask_spine = one_hot_mask[2]
         mask_spleen = one_hot_mask[3]
-        results['key'] = [key]
-        results['project'] = [project]
-        results['volume_liver'] = [np.sum(mask_liver)*voxel_vol]
-        results['volume_spine'] = [np.sum(mask_spine)*voxel_vol]
-        results['volume_spleen'] = [np.sum(mask_spleen)*voxel_vol]
+        results['key'] = [str(key)]
+        results['project'] = [str(project)]
+        results['volume_liver'] = [float(np.sum(mask_liver)*voxel_vol)]
+        results['volume_spine'] = [float(np.sum(mask_spine)*voxel_vol)]
+        results['volume_spleen'] = [float(np.sum(mask_spleen)*voxel_vol)]
 
         uptake_liver = np.ma.array(mask_liver*pet, mask=(mask_liver==0))
-        results['uptake_liver_mean'] = [uptake_liver.mean()*petsuv_scale]
-        results['uptake_liver_std'] = [uptake_liver.std()*petsuv_scale]
-        results['uptake_liver_min'] = [uptake_liver.min()*petsuv_scale]
-        results['uptake_liver_max'] = [uptake_liver.max()*petsuv_scale]
-        results['uptake_liver_median'] = [np.ma.median(uptake_liver)*petsuv_scale]
+        results['uptake_liver_mean'] = [float(uptake_liver.mean()*petsuv_scale)]
+        results['uptake_liver_std'] = [float(uptake_liver.std()*petsuv_scale)]
+        results['uptake_liver_min'] = [float(uptake_liver.min()*petsuv_scale)]
+        results['uptake_liver_max'] = [float(uptake_liver.max()*petsuv_scale)]
+        results['uptake_liver_median'] = [float(np.ma.median(uptake_liver)*petsuv_scale)]
 
         uptake_spine = np.ma.array(mask_spine*pet, mask=(mask_spine==0))
-        results['uptake_spine_mean'] = [uptake_spine.mean()*petsuv_scale]
-        results['uptake_spine_std'] = [uptake_spine.std()*petsuv_scale]
-        results['uptake_spine_min'] = [uptake_spine.min()*petsuv_scale]
-        results['uptake_spine_max'] = [uptake_spine.max()*petsuv_scale]
-        results['uptake_spine_median'] = [np.ma.median(uptake_spine)*petsuv_scale]
+        results['uptake_spine_mean'] = [float(uptake_spine.mean()*petsuv_scale)]
+        results['uptake_spine_std'] = [float(uptake_spine.std()*petsuv_scale)]
+        results['uptake_spine_min'] = [float(uptake_spine.min()*petsuv_scale)]
+        results['uptake_spine_max'] = [float(uptake_spine.max()*petsuv_scale)]
+        results['uptake_spine_median'] = [float(np.ma.median(uptake_spine)*petsuv_scale)]
 
         uptake_spleen = np.ma.array(mask_spleen*pet, mask=(mask_spleen==0))
-        results['uptake_spleen_mean'] = [uptake_spleen.mean()*petsuv_scale]
-        results['uptake_spleen_std'] = [uptake_spleen.std()*petsuv_scale]
-        results['uptake_spleen_min'] = [uptake_spleen.min()*petsuv_scale]
-        results['uptake_spleen_max'] = [uptake_spleen.max()*petsuv_scale]
-        results['uptake_spleen_median'] = [np.ma.median(uptake_spleen)*petsuv_scale]
+        results['uptake_spleen_mean'] = [float(uptake_spleen.mean()*petsuv_scale)]
+        results['uptake_spleen_std'] = [float(uptake_spleen.std()*petsuv_scale)]
+        results['uptake_spleen_min'] = [float(uptake_spleen.min()*petsuv_scale)]
+        results['uptake_spleen_max'] = [float(uptake_spleen.max()*petsuv_scale)]
+        results['uptake_spleen_median'] = [float(np.ma.median(uptake_spleen)*petsuv_scale)]
 
         # plots
         obj = find_objects(mask_predicted==3)
