@@ -50,7 +50,7 @@ def analysis(prediction_path, data_path, jobs):
             project = ds.attrs['project']
 
         # postprocess
-        one_hot_mask = one_hot_encoded(mask_predicted)
+        one_hot_mask = one_hot_encoded(mask_predicted, C=4)
 
         # analysis 
         voxel_vol = 2*2*3 # mm^3

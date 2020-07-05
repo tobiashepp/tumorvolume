@@ -88,7 +88,7 @@ def run_postprocessing(prediction_path, jobs):
             ds = gr[key]
             mask = ds[0, :]
             affine = ds.attrs['affine']
-            one_hot_mask = one_hot_encoded(mask)
+            one_hot_mask = one_hot_encoded(mask, C=4)
             one_hot_mask = fill_holes(one_hot_mask)
             one_hot_mask = largest_component(one_hot_mask)
             mask_pp = np.argmax(one_hot_mask, axis=0)
