@@ -13,5 +13,6 @@ torch
 torchvision
 seaborn
 python-dotenv
+pyarrow
 # midas-lab gitub
 # mednet 
