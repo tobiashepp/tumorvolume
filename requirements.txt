@@ -2,3 +2,16 @@ h5py
 nibabel
 matplotlib
 scikit-learn
+scikit-image
+zarr
+pandas
+click
+tqdm
+p_tqdm
+loguru
+torch 
+torchvision
+searborn
+python-dotenv
+# midas-lab gitub
+# mednet 
