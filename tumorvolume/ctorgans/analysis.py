@@ -134,7 +134,7 @@ def analysis(prediction_path, data_path, jobs):
         return results
 
     # parallel processing
-    results = p_map(proc, keys[:2], num_cpus=jobs)
+    results = p_map(proc, keys, num_cpus=jobs)
 
     # save dataframe with results
     df = pd.concat([pd.DataFrame.from_dict(r) for r in results])
