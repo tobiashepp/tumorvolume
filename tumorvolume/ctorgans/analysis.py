@@ -2,6 +2,8 @@ import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from os.path import basename
+from zipfile import ZipFile
 
 import click
 import torch
@@ -13,9 +15,12 @@ from p_tqdm import p_map
 from pathlib import Path
 from skimage.measure import label 
 from scipy.ndimage import find_objects
+from dotenv import load_dotenv
 
 from tumorvolume.ctorgans.postprocessing import one_hot_encoded
 
+load_dotenv()
+DATA = os.getenv('DATA')
 
 @click.command()
 @click.option('--jobs', default=1, help='number of parallel jobs')
@@ -23,7 +28,6 @@ from tumorvolume.ctorgans.postprocessing import one_hot_encoded
 @click.option('--data_path', default='DATA/interim/petct/TUE0000ALLDS_3D.h5')
 def analysis(prediction_path, data_path, jobs):
     # paths
-    DATA = os.getenv('DATA')
     work_dir = Path(DATA)
     data_path = Path(data_path.replace('DATA', DATA))
     prediction_path = Path(prediction_path.replace('DATA', DATA))
@@ -139,7 +143,17 @@ def analysis(prediction_path, data_path, jobs):
     # save dataframe with results
     df = pd.concat([pd.DataFrame.from_dict(r) for r in results])
     df = df.reset_index()
-    df.to_feather(work_dir/'processed/ctorgans/ctorgans_petct.bin')
+    df.to_feather(work_dir/'processed/ctorgans'/f'{prediction_path.stem}.bin')
+
+    # zip results 
+    print('zipping results ...')
+    zip_path = work_dir/'processed/ctorgans'/f'{prediction_path.stem}_png.zip'
+    with ZipFile(zip_path, 'a') as zipf:
+        for folder, subfolders, filenames in os.walk(out_dir):
+            for filename in filenames:
+                p = os.path.join(folder, filename)
+                # add file to zip
+                zipf.write(p, basename(p))
 
 if __name__ == '__main__':
     analysis()
