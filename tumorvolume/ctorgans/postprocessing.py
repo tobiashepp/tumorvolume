@@ -7,7 +7,6 @@ import click
 import numpy as np
 from dotenv import load_dotenv
 load_dotenv()
-from loguru import logger
 from p_tqdm import p_map
 from skimage.measure import label 
 from scipy.ndimage.morphology import binary_fill_holes
@@ -73,7 +72,7 @@ def one_hot_encoded(categorial_mask):
 @click.command()
 @click.option('--jobs', default=1, help='number of parallel jobs')
 @click.argument('prediction_path')
-def run_postprocessing(prediction_path): 
+def run_postprocessing(prediction_path, jobs): 
     DATA = os.getenv('DATA')
     prediction_path = str(prediction_path).replace('DATA', DATA)
     prediction_path = Path(prediction_path)
@@ -98,11 +97,10 @@ def run_postprocessing(prediction_path):
             ds_pp = gr_pp.require_dataset(key, mask_pp.shape, dtype=mask_pp.dtype)
             ds_pp[:] = mask_pp
             ds_pp.attrs['affine'] = affine
-            logger.debug(f'{key} - finished')
 
         # parallel processing
         p_map(proc, keys[:5], num_cpus=2)
     
 
 if __name__ == '__main__':
-    run_postprocessing('DATA/processed/ctorgans/ctorgans_petct_1.zarr')
+    run_postprocessing()
