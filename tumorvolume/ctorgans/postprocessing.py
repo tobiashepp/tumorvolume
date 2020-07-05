@@ -99,7 +99,7 @@ def run_postprocessing(prediction_path, jobs):
             ds_pp.attrs['affine'] = affine
 
         # parallel processing
-        p_map(proc, keys[:5], num_cpus=2)
+        p_map(proc, keys, num_cpus=jobs)
     
 
 if __name__ == '__main__':
