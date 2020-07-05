@@ -1,8 +1,0 @@
-README.md
-setup.py
-tumorvolume/RunPreprocessing.py
-tumorvolume/__init__.py
-tumorvolume.egg-info/PKG-INFO
-tumorvolume.egg-info/SOURCES.txt
-tumorvolume.egg-info/dependency_links.txt
-tumorvolume.egg-info/top_level.txt
