@@ -1,0 +1,12 @@
+data_path: /mnt/qdata/raheppt1/data/tumorvolume/interim/petct/TUE0000ALLDS_3D.h5
+image_group: image
+test_set: /mnt/qdata/raheppt1/data/tumorvolume/interim/petct/keys/TUE0000ALLDS_3D_test0.dat
+patch_size: [96, 96, 96]
+patch_overlap: [25, 25, 25]
+num_heatmaps: 0
+batch_size: 8
+channel_selection: [0, 1]
+prediction_path: /mnt/qdata/raheppt1/data/tumorvolume/processed/petct/petct_validation.zip
+prediction_group: prediction
+checkpoint_path: /mnt/share/raheppt1/data/tumorvolume/petct/models/default_petbc/16_MED-160/checkpoints/epoch=98.ckpt
+chunk_size: 50 
