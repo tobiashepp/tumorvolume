@@ -25,6 +25,8 @@ def validation(cfg):
         cfg (OmegaConf): Hydra configuration.
     """
     # copy over
+    image_group = cfg.base.image_group
+    label_group = cfg.base.label_group
     data_path = Path(cfg.base.data)
     prediction_path = Path(cfg.prediction.data) 
     png_dir = Path(cfg.validation.plots)/f'{cfg.base.name}_predictions{cfg.base.suffix}'
@@ -33,11 +35,9 @@ def validation(cfg):
     nifti_dir.mkdir(exist_ok=True, parents=True)
     csv_path = Path(cfg.validation.export)/f'{cfg.base.name}_predictions{cfg.base.suffix}.csv'
 
-    print(prediction_path)
     # get key list
     with zarr.open(store=zarr.ZipStore(prediction_path, mode='r')) as zf:
         keys = list(zf['prediction'])
-    print(keys)
 
     result_dict = {'key': [], 
                 'project': [],
@@ -53,11 +53,11 @@ def validation(cfg):
 
         # load training data
         with h5py.File(data_path, 'r') as hf:
-            ds = hf[f'image/{key}']
+            ds = hf[f'{image_group}/{key}']
             img = ds[0,:].astype(np.float32)
             project = ds.attrs['project']
             affine = ds.attrs['affine'] 
-            mask = hf[f'mask_iso/{key}'][0, :]
+            mask = hf[f'{label_group}/{key}'][0, :]
 
         # store nifti files
         nib.save(nib.Nifti1Image(img, affine), 
