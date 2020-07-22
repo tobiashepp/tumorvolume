@@ -3,6 +3,7 @@ base:
   suffix: '_v2.0' #_new
   data: ${env:DATA}/interim/petct/TUE0000ALLDS_3D.h5
   image_group: image
+  label_group: mask_iso
  
 prediction:
   model: SegmentationNet
