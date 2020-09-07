@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22ad57da-5789-4b29-933c-58bc35f6cecd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/experiments/AddPlotsToHDF5.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/AddPlotsToHDF5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/ProjectFromRawData.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/ProjectFromRawData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/RunPETConversionIsocont.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/RunPETConversion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/RunPreprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/RunPreprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="37f62dbb-2e5c-4760-961b-737922f8f5f1" />
+  <component name="ProjectId" id="1cleUROfqYZa9ZSu4jSAVXaX7yH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../primes" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kerbe\PycharmProjects\tumorvolume\notebooks" />
+      <recent name="C:\Users\kerbe\PycharmProjects\tumorvolume\tumorvolume" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.h5_2d">
+    <configuration name="Atlas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tumorvolume" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Schockraum" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\kerbe\PycharmProjects\tumorvolume\Schockraum\Atlas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MergeH5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tumorvolume" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://rakerbb1@193.196.20.157:22/home/rakerbb1/.pyenv/versions/tvol/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/MergeH5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WorkWithZip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tumorvolume" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/WorkWithZip.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="tumorvolume" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="h5_2d" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tumorvolume" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Schockraum" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Schockraum/h5_2d.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.MergeH5" />
+      <item itemvalue="Python.WorkWithZip" />
+      <item itemvalue="Python.Atlas" />
+      <item itemvalue="Python.h5_2d" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.h5_2d" />
+        <item itemvalue="Python.MergeH5" />
+        <item itemvalue="Python.Atlas" />
+        <item itemvalue="Python.WorkWithZip" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\kerbe\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22ad57da-5789-4b29-933c-58bc35f6cecd" name="Default Changelist" comment="" />
+      <created>1591107622742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591107622742</updated>
+      <workItem from="1591107625484" duration="75000" />
+      <workItem from="1591107702296" duration="2932000" />
+      <workItem from="1591110684531" duration="12398000" />
+      <workItem from="1591366038867" duration="979000" />
+      <workItem from="1591367036245" duration="9485000" />
+      <workItem from="1591381345270" duration="7338000" />
+      <workItem from="1591442249041" duration="46739000" />
+      <workItem from="1591614334767" duration="6960000" />
+      <workItem from="1591703249490" duration="12109000" />
+      <workItem from="1591879045226" duration="8409000" />
+      <workItem from="1591891587740" duration="28310000" />
+      <workItem from="1591966411940" duration="73979000" />
+      <workItem from="1592227418054" duration="12250000" />
+      <workItem from="1592300740135" duration="71253000" />
+      <workItem from="1592495916409" duration="23038000" />
+      <workItem from="1592574574490" duration="15445000" />
+      <workItem from="1592651945780" duration="22055000" />
+      <workItem from="1592814126049" duration="54429000" />
+      <workItem from="1593359537326" duration="87913000" />
+      <workItem from="1595666160802" duration="13168000" />
+      <workItem from="1595768478199" duration="132748000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="70" key="#Deployment" timestamp="1592817733009">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1592817733009" />
+    <state x="413" y="70" key="#Inspections" timestamp="1591108949288">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="413" y="70" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1591108949288" />
+    <state x="444" y="94" key="#Options" timestamp="1592818233429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="444" y="94" key="#Options/0.0.1536.824@0.0.1536.824" timestamp="1592818233429" />
+    <state x="345" y="57" key="#SSH_Configurations" timestamp="1592817720058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="57" key="#SSH_Configurations/0.0.1536.824@0.0.1536.824" timestamp="1592817720058" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599235923378">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599235923378" />
+    <state x="540" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597151320527">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1597151320527" />
+    <state x="537" y="181" key="#com.intellij.tools.ToolEditorDialog" timestamp="1591800021066">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="537" y="181" key="#com.intellij.tools.ToolEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1591800021066" />
+    <state x="93" y="93" width="1350" height="638" key="DirDiffDialog" timestamp="1592818423344">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DirDiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1592818423344" />
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1592817855359">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592817855359" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1599489401814">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599489401814" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1599489401814">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599489401814" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1599489401813">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599489401813" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1599489401814">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599489401814" />
+    <state width="1493" height="339" key="GridCell.Tab.1.bottom" timestamp="1592570665255">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="339" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592570665255" />
+    <state width="1493" height="339" key="GridCell.Tab.1.center" timestamp="1592570665255">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="339" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592570665255" />
+    <state width="1493" height="339" key="GridCell.Tab.1.left" timestamp="1592570665255">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="339" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592570665255" />
+    <state width="1493" height="339" key="GridCell.Tab.1.right" timestamp="1592570665255">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="339" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592570665255" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1592819138808">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592819138808" />
+    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1597336515353">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1536.824@0.0.1536.824" timestamp="1597336515353" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592202038262">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1592202038262" />
+    <state x="322" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1592303048002">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="322" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1592303048002" />
+    <state x="578" y="297" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1591107929058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="297" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1536.824@0.0.1536.824" timestamp="1591107929058" />
+    <state x="302" y="141" width="1027" height="510" key="dock-window-1" timestamp="1592314059261">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="302" y="141" width="1027" height="510" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1592314059261" />
+    <state x="666" y="142" key="ftp.server.browser" timestamp="1592817427974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="666" y="142" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1592817427974" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592211966710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592211966710" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tumorvolume$RunPreprocessing.coverage" NAME="RunPreprocessing Coverage Results" MODIFIED="1592331986659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/tumorvolume$Norma.coverage" NAME="Norma Coverage Results" MODIFIED="1592558469924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/tumorvolume$WorkWithZip.coverage" NAME="WorkWithZip Coverage Results" MODIFIED="1591373731516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/tumorvolume$AddPlotsToHDF5.coverage" NAME="AddPlotsToHDF5 Coverage Results" MODIFIED="1592837894117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/tumorvolume$RegSegment.coverage" NAME="RegSegment Coverage Results" MODIFIED="1593412931656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Schockraum" />
+    <SUITE FILE_PATH="coverage/tumorvolume$MergeH5.coverage" NAME="MergeH5 Coverage Results" MODIFIED="1595840201213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments" />
+    <SUITE FILE_PATH="coverage/tumorvolume$h5_2d.coverage" NAME="h5_2d Coverage Results" MODIFIED="1599313490724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Schockraum" />
+  </component>
+</project>
