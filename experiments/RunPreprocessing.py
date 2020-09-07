@@ -60,7 +60,7 @@ def save_nii(project_name, destination_dir, patient, data_dict):
 def run_preprocessing(zip_archive,
                       destination_dir,
                       orientation=("L", "A", "S"),
-                      target_spacing=(2, 2, 3),
+                      target_spacing=(1, 1, 3),
                       xy_shape=200,
                       ct_min_max=(-1000, 1000),
                       pet_min_max=(0, 40),
@@ -178,16 +178,16 @@ def run_preprocessing(zip_archive,
                        "affine": ret_affine}
         return return_dict
 
-    def chunky(lst, n):
+    def chunky(lst, jobs):
         """Yield successive n-sized chunks from lst."""
-        for i in range(0, len(lst), jobs):
-            if not (i + n) > len(lst):
+        for di in range(0, len(lst), jobs):
+            if not (i + jobs) > len(lst):
                 so_chunky = lst[i:i + jobs]
             else:
                 so_chunky = lst[i:len(lst)]
             yield so_chunky
 
-    patient_chunks = list(chunky(list(patients.keys()), 5))
+    patient_chunks = list(chunky(list(patients.keys()), jobs))
     for chunk in patient_chunks:
         results = Parallel(n_jobs=min(jobs, len(chunk)))(delayed(proc)(patient=patient) for patient in chunk)
 

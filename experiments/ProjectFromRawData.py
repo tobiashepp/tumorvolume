@@ -5,6 +5,7 @@ from hashlib import sha3_256
 import glob
 import re
 
+
 class ProjectFromRawData:
     def __init__(self, workdir, targetdir):
         self.workdir = Path(workdir)
@@ -81,7 +82,7 @@ class ProjectFromRawData:
                     requirements_list.append(missing)
         df = pd.DataFrame({"patient name": pd.Series(name_list),
                            "patient hash": pd.Series(hash_list),
-                           "requirements": pd.Series(requirements_list)})
+                           "requirements.txt": pd.Series(requirements_list)})
         df.to_csv(path_or_buf=projectdir/Path("patientinfo.csv"))
 
 
