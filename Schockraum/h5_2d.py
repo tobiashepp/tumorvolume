@@ -44,7 +44,7 @@ def proc(tpl):
                                target_affine=img.affine,
                                target_shape=(shape, shape, shape),
                                interpolation="continuous",
-                               fill_value=-1024)
+                               fill_value=0)
         res_arr = res_img.get_fdata().astype(np.float32)
 
         arr_min = 0

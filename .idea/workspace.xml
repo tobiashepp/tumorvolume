@@ -46,10 +46,13 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../primes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tumorvolume" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kerbe\PycharmProjects\tumorvolume\tumorvolume" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kerbe\PycharmProjects\tumorvolume\notebooks" />
       <recent name="C:\Users\kerbe\PycharmProjects\tumorvolume\tumorvolume" />
@@ -212,7 +215,7 @@
       <workItem from="1592814126049" duration="54429000" />
       <workItem from="1593359537326" duration="87913000" />
       <workItem from="1595666160802" duration="13168000" />
-      <workItem from="1595768478199" duration="132748000" />
+      <workItem from="1595768478199" duration="150792000" />
     </task>
     <servers />
   </component>
@@ -244,6 +247,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="444" y="94" key="#Options/0.0.1536.824@0.0.1536.824" timestamp="1592818233429" />
+    <state x="568" y="121" key="#Python" timestamp="1599489477019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="568" y="121" key="#Python/0.0.1536.824@0.0.1536.824" timestamp="1599489477019" />
     <state x="345" y="57" key="#SSH_Configurations" timestamp="1592817720058">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -260,6 +267,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="537" y="181" key="#com.intellij.tools.ToolEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1591800021066" />
+    <state x="484" y="0" key="#h5_2d" timestamp="1599494402056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="484" y="0" key="#h5_2d/0.0.1536.824@0.0.1536.824" timestamp="1599494402056" />
     <state x="93" y="93" width="1350" height="638" key="DirDiffDialog" timestamp="1592818423344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -268,22 +279,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592817855359" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1599489401814">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1599548385352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599489401814" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1599489401814">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599548385352" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1599548385351">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599489401814" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1599489401813">
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599548385351" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1599548385349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599489401813" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1599489401814">
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599548385349" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1599548385352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599489401814" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599548385352" />
     <state width="1493" height="339" key="GridCell.Tab.1.bottom" timestamp="1592570665255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
