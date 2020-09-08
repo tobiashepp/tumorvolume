@@ -171,6 +171,7 @@ def run_preprocessing(zip_archive,
                      destination_dir=destination_dir,
                      patient=patient,
                      data_dict=rs_img_dict)
+
         return_dict = {"patient": patient,
                        "image": ret_img,
                        "mask": ret_mask,

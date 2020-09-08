@@ -62,7 +62,7 @@ def run_preprocessing(ct_image,
     ct_img = nib.load(ct_image)
     or_ct_img = reorient_nii(ct_img, target_orientation=orientation)
     pet_img = nib.load(petsuv_image)
-    or_pet_img = reorient_nii(pet_img, target_orientation=orientation)
+    or_pet_img = reorient_nii(ct_img, target_orientation=orientation)
 
     # resample to target resolution
     orig_spacing = np.array(or_ct_img.header.get_zooms())
@@ -89,7 +89,14 @@ def run_preprocessing(ct_image,
     petsuv = normalization(rs_pet_img.get_fdata(), pet_min_max[0], pet_min_max[1])
     ret_img = np.stack([petsuv, ct], axis=0).astype(np.float16)
     print(ret_img.shape)
-    return ret_img
+    ret_mask = np.array(rs_img_dict["mask"].get_fdata() > 0).astype(np.uint8)
+    ret_mask = ret_mask[np.newaxis, :]
+    print(ret_mask.shape)
+    ret_mask_iso = np.array(rs_img_dict["mask_iso"].get_fdata() > 0).astype(np.uint8)
+    ret_mask_iso = ret_mask_iso[np.newaxis, :]
+    print(ret_mask_iso.shape)
+    ret_affine = rs_or_ct_img.affine
+    return
 
 
 def main():
