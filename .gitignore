@@ -81,6 +81,7 @@ target/
 
 # experiments
 /experiments/Norma.py
+/experiments/CreateProject.py
 /experiments/WorkWithZip.py
 /experiments/RunPETConversion.py
 /experiments/ReturnNiiForNora.py
