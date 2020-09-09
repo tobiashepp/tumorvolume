@@ -1,14 +1,9 @@
-import re
-from io import BytesIO
-from zipfile import ZipFile
-import gzip
 from pathlib import Path
 import argparse
 
 import numpy as np
 import nilearn.image
 import nibabel as nib
-from midastools.pet.isocont import isocont
 from midastools.misc.orientation import reorient_nii
 
 from joblib import Parallel, delayed
@@ -37,7 +32,7 @@ def run_preprocessing(project_dir,
                       target_spacing=(1, 1, 1),
                       xy_shape=200,
                       ct_min_max=(0, 100),
-                      jobs=10):
+                      jobs=20):
     """
     Reads nii-files in and resamples the images, storing them in a hdf5-file.
 
@@ -54,17 +49,20 @@ def run_preprocessing(project_dir,
     Returns:
         None
     """
-    project_name = Path(project_dir).name
+    project_dir = Path(project_dir)
+    project_name = project_dir.name
     dirs_to_draw = []
     for study_dir in project_dir.iterdir():
-        dirs_to_draw.append(str(study_dir))
+        if study_dir.is_dir():
+            dirs_to_draw.append(str(study_dir))
 
     print("total: " + str(len(list(project_dir.iterdir())) - 3) + "\n" + "first: " + dirs_to_draw[0] + "\n" + "last: " +
           dirs_to_draw[-1])
 
     def proc(patient_dir):
         try:
-            patient = Path(patient_dir).name
+            patient_dir = Path(patient_dir)
+            patient = patient_dir.name
             print(patient)
             ct_img = nib.load(patient_dir/(patient + "_ants_reg_strip.nii"))
             or_ct_img = reorient_nii(ct_img, target_orientation=orientation)
@@ -84,14 +82,16 @@ def run_preprocessing(project_dir,
                                                    target_shape=target_shape,
                                                    interpolation="continuous",
                                                    fill_value=0)
-            # cast and concat
-            ct = normalization(rs_ct_img.get_fdata(), ct_min_max[0], ct_min_max[1])
-            return patient, ct
+            affine = rs_ct_img.affine
+            ct_arr = normalization(rs_ct_img.get_fdata(), ct_min_max[0], ct_min_max[1])
+            return True, patient, ct_arr, affine
+
         except Exception as e:
             patient = Path(patient_dir).name
             print(e)
             error_dict["pat_hash"].append(patient)
             error_dict["cause"].append(e)
+            return False, patient
 
     def chunky(lst, jbs):
         """Yield successive n-sized chunks from lst."""
@@ -109,19 +109,21 @@ def run_preprocessing(project_dir,
                                                          for patient_dir in chunk)
 
         out_dir = Path(destination_dir)
-        hdf5name = project_name + "_3D.h5"
+        hdf5name = project_name + "_3d.h5"
         outfile = out_dir/hdf5name
         with h5py.File(outfile, "a") as hdf5:
             for result in results:
-                affine_to_list = result[1].tolist()
-                group = hdf5.require_group("image")
-                group.require_dataset(name=result[0],
-                                      data=result[1],
-                                      shape=result[1].shape,
-                                      dtype=result[1].dtype)
-                group[result[0]].attrs["affine"] = affine_to_list
-                group[result[0]].attrs["project"] = project_name
-
+                if result[0]:
+                    affine_to_list = result[3].tolist()
+                    group = hdf5.require_group("image")
+                    group.require_dataset(name=result[1],
+                                          data=result[2],
+                                          shape=result[2].shape,
+                                          dtype=result[2].dtype)
+                    group[result[1]].attrs["affine"] = affine_to_list
+                    group[result[1]].attrs["project"] = project_name
+                else:
+                    print("preprocessing failed: " + result[1])
     return "done"
 
 
