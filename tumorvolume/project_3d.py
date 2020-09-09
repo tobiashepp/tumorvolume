@@ -54,7 +54,7 @@ def run_preprocessing(project_dir,
     Returns:
         None
     """
-    project_name = Path(project_dir.name)
+    project_name = Path(project_dir).name
     dirs_to_draw = []
     for study_dir in project_dir.iterdir():
         dirs_to_draw.append(str(study_dir))
