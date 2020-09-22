@@ -1,6 +1,6 @@
 base:
   name: petct_all
-  suffix: '_v2.0' #_new
+  suffix: '' #_new
   data: ${env:DATA}/interim/petct/TUE0000ALLDS_3D.h5
   image_group: image
   label_group: mask_iso
@@ -11,7 +11,7 @@ prediction:
   data: ${env:DATA}/processed/petct/${base.name}_predictions${base.suffix}.zip 
   group: prediction
   # file with keys to process
-  test_set: ${env:DATA}/interim/petct/keys/TUE0000ALLDS_3D_difficult.dat
+  test_set: ${env:DATA}/interim/petct/keys/TUE0000ALLDS_3D_test0.dat
   # patch size, overlap and batch_size for the prediction
   patch_size: [96, 96, 96]
   patch_overlap: [25, 25, 25]
@@ -19,10 +19,28 @@ prediction:
   # selected input channels 
   channel_selection: [0, 1]
   # number of subjects to process at once
-  chunk_size: 5
+  chunk_size: 50
   # pytorch model checkpoint
   checkpoint: /tmp/petct97.ckpt
 
+postprocessing:
+  data: ${env:DATA}/processed/petct/${base.name}_postprocessed${base.suffix}.zarr
+  group: processed
+  jobs: 10
+  threshold: 0.3
+
 validation:
+  voxel_vol: 12 # 2*2*3
+  petsuv_scale: 40 # [0,1] -> [0,petsuv_scale] SUV
+  jobs: 10
+  data: ${postprocessing.data}
+  group: ${postprocessing.group}
   export: ${env:DATA}/processed/petct/export
   plots: ${env:DATA}/processed/petct/plots
+
+nora:
+  nora_project: raheppt1___petct
+  nora_study: 0001
+  nora_date: 20200701
+  nora_png: True
+  nora_organs: /mnt/qdata/raheppt1/data/tumorvolume/processed/ctorgans/ctorgans_petct.zarr

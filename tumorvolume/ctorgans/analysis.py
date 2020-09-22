@@ -144,7 +144,8 @@ def analysis(prediction_path, data_path, jobs):
     # save dataframe with results
     df = pd.concat([pd.DataFrame.from_dict(r) for r in results])
     df = df.reset_index()
-    df.to_feather(work_dir/'processed/ctorgans'/f'{prediction_path.stem}.bin')
+    df.to_feather(work_dir/'processed/ctorgans'/f'{prediction_path.stem}.feather')
+    df.to_csv(work_dir/'processed/ctorgans'/f'{prediction_path.stem}.csv')
 
     # zip results 
     print('zipping results ...')

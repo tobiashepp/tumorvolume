@@ -76,8 +76,6 @@ for key in keys:
     dice = compute_per_channel_dice(oh_mask_predicted, oh_mask)
     dice_pp = compute_per_channel_dice(oh_mask_predicted_pp, oh_mask)
 
-    # TODO volumina, pet uptake
-
     # save dice results
     print(f'{key} dice {dice} dice/pp {dice_pp}')
     result_dict['key'].append(key)
@@ -119,3 +117,4 @@ for key in keys:
 # csv dice results to csv
 df = pd.DataFrame.from_dict(result_dict)
 df.to_csv(work_dir/'processed/ctorgans/ctorgans_validation.csv')
+df.to_feather(work_dir/'processed/ctorgans/ctorgans_validation.feather')

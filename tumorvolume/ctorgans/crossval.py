@@ -11,10 +11,8 @@ DATA = os.getenv('DATA')
 h5_path = Path(DATA)/'interim/petbc/TUE0000ALLDS_3D.h5'
 shuffle=True
 splits = 5
-
 with h5py.File(h5_path, 'r') as hf:
     subject_keys = list(hf['image'])
-
 kf = KFold(n_splits=5, shuffle=shuffle)
 for k, (train_index, test_index) in enumerate(kf.split(subject_keys)):
     train_keys = [(subject_keys[i] + '\n') for i in train_index]

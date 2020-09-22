@@ -14,5 +14,7 @@ torchvision
 seaborn
 python-dotenv
 pyarrow
+nilearn
+ipywidgets
 # midas-lab gitub
 # mednet 

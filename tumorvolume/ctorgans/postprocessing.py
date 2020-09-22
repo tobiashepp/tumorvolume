@@ -77,7 +77,7 @@ def run_postprocessing(prediction_path, jobs):
     prediction_path = Path(prediction_path)
     print(f'post processing {prediction_path}')
 
-    with zarr.open(store=zarr.DirectoryStore(prediction_path)) as zf:
+    with zarr.open(str(prediction_path)) as zf:
         # read from group 'prediction', store to group 'processed'
         gr = zf['prediction']
         gr_pp = zf.require_group('processed')
@@ -93,7 +93,7 @@ def run_postprocessing(prediction_path, jobs):
             one_hot_mask = largest_component(one_hot_mask)
             mask_pp = np.argmax(one_hot_mask, axis=0)
             mask_pp = mask_pp[np.newaxis, ...]
-            ds_pp = gr_pp.require_dataset(key, mask_pp.shape, dtype=mask_pp.dtype)
+            ds_pp = gr_pp.require_dataset(key, mask_pp.shape, dtype=mask_pp.dtype, chunks=False)
             ds_pp[:] = mask_pp
             ds_pp.attrs['affine'] = affine
 
