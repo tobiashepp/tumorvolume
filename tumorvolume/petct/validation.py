@@ -19,8 +19,6 @@ from scipy.ndimage import label
 from midasmednet.unet.loss import compute_per_channel_dice, expand_as_one_hot
 from tumorvolume.ctorgans.postprocessing import largest_component
 
-
-os.environ['CONFIG'] = '/home/raheppt1/projects/tumorvolume/config/petct.yaml'
 @hydra.main(config_path=os.getenv('CONFIG'), strict=False)
 def validation(cfg):
     """Validate lesion segmentation (use manual labels as reference).

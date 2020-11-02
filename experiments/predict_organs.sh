@@ -10,5 +10,4 @@ pyenv deactivate
 pyenv activate mednet
 export CONFIG=$PRJ/tumorvolume/config/ctorgans_predict_petct.yaml
 export CUDA_VISIBLE_DEVICES=0
-cd $PRJ/vessel
 python $PRJ/mednet/examples/predict.py

@@ -1,0 +1,24 @@
+base:
+  name: ctorgans_petct
+  suffix: '_testset' #_new
+  data: ${env:DATA}/interim/petct/TUE001XTSXXX_3D.h5
+  image_group: image
+ 
+prediction:
+  model: SegmentationNet
+  # path to zarr zip to store the predictions
+  data: ${env:DATA}/processed/ctorgans/${base.name}${base.suffix}.zip
+  group: prediction
+  # file with keys to process
+  test_set: ${env:DATA}/interim/petct/keys/TUE001XTSXXX_3D_all.dat
+  # patch size, overlap and batch_size for the prediction
+  patch_size: [96, 96, 96]
+  patch_overlap: [25, 25, 25]
+  batch_size: 8
+  # selected input channels 
+  channel_selection: [1]
+  # number of subjects to process at once
+  chunk_size: 50
+  # pytorch model checkpoint
+  checkpoint: /mnt/share/raheppt1/data/tumorvolume/ctorgans/models/default_ctorgans/11_MED-161/checkpoints/epoch=294.ckpt
+

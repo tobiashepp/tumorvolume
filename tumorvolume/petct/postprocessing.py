@@ -32,8 +32,6 @@ def lcomp(mask):
     labels_max = (labels == largest).astype(np.uint8)
     return labels_max
 
-
-os.environ['CONFIG'] = '/home/raheppt1/projects/tumorvolume/config/petct.yaml'
 @hydra.main(config_path=os.getenv('CONFIG'), strict=False)
 def main(cfg):
     image_data = cfg.base.data 

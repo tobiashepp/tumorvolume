@@ -17,7 +17,6 @@ from tumorvolume.ctorgans.postprocessing import largest_component
 # load .env configuration
 load_dotenv()
 
-os.environ['CONFIG'] = '/home/raheppt1/projects/tumorvolume/config/petct.yaml'
 @hydra.main(config_path=os.getenv('CONFIG'), strict=False)
 def nora(cfg):
     """Export results to nora project.
