@@ -1,8 +1,11 @@
 # Tumorvolume
 
+![TumorAutomatic](https://github.com/lab-midas/tumorvolume/blob/master/images/sample_output.gif "Automatically labeled tumor lesions")
+
 ![TumorManual](https://github.com/lab-midas/tumorvolume/blob/master/images/sample_label.gif "Manually labeled tumor lesions")
 
-<div style="text-align:center"><img src="https://github.com/lab-midas/tumorvolume/blob/master/images/sample_label.gif" /></div>
+![Organs](https://github.com/lab-midas/tumorvolume/blob/master/images/sample_organs.png "Metabolic activation in spleen, liver and spine bone marrow")
+
 ## Install 
 
 Create a virtual environment with **python 3.7.4**
