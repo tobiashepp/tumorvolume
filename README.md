@@ -8,7 +8,7 @@
 
 ## Install 
 
-Create a virtual environment with **python 3.7.4**
+Create a virtual environment:
 
     conda create -n tumorvolume python=3.7.4
 
@@ -17,7 +17,7 @@ Install requirements for the *tumorvolume* projects as well as the *torch-mednet
     conda activate tumorvolume
     pip install -r requirements.txt
 
-Go to the project root directory and run 
+Go to the project root directory and run:
 
     pip install -e ./
 
