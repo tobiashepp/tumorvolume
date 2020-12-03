@@ -1,5 +1,6 @@
 # Tumorvolume
 
+![TumorManual](https://github.com/lab-midas/tumorvolume/blob/master/images/sample_label.gif "Manually labeled tumor lesions")
 
 ## Install 
 
