@@ -7,7 +7,6 @@ from os.path import basename
 from zipfile import ZipFile
 
 import click
-import torch
 import zarr
 import h5py
 import numpy as np

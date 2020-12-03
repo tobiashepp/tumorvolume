@@ -21,7 +21,7 @@ prediction:
   # number of subjects to process at once
   chunk_size: 50
   # pytorch model checkpoint
-  checkpoint: /mnt/share/raheppt1/data/tumorvolume/petct/models/default_petct/21_MED-177/checkpoints/epoch=113.ckpt
+  checkpoint: ${env:DATA}/interim/petct/models/default_petct/21_MED-177/checkpoints/epoch=113.ckpt
 
 postprocessing:
   data: ${env:DATA}/processed/petct/${base.name}_postprocessed${base.suffix}.zarr
@@ -43,4 +43,4 @@ nora:
   nora_study: 0002
   nora_date: 20201015
   nora_png: True
-  nora_organs: /mnt/qdata/raheppt1/data/tumorvolume/processed/ctorgans/ctorgans_petct_testset.zarr
+  nora_organs: ${env:DATA}/processed/ctorgans/ctorgans_petct_testset.zarr

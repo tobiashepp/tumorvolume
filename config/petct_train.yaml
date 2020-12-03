@@ -7,8 +7,8 @@ train_set: /mnt/qdata/raheppt1/data/tumorvolume/interim/petct/keys/TUE0000ALLDS_
 val_set: /mnt/qdata/raheppt1/data/tumorvolume/interim/petct/keys/TUE0000ALLDS_3D_test4.dat
 image_group: image
 label_group: mask_iso
-model_dir: /mnt/share/raheppt1/data/tumorvolume/petct/models/
-log_dir: /mnt/share/raheppt1/data/tumorvolume/petct/logs/
+model_dir: /mnt/qdata/raheppt1/data/tumorvolume/interim/petct/models/
+log_dir: /mnt/qdata/raheppt1/data/tumorvolume/interim/petct/logs/
 data_augmentation: True
 gpus: 1
 preload: True

@@ -20,5 +20,5 @@ prediction:
   # number of subjects to process at once
   chunk_size: 50
   # pytorch model checkpoint
-  checkpoint: /mnt/share/raheppt1/data/tumorvolume/ctorgans/models/default_ctorgans/11_MED-161/checkpoints/epoch=294.ckpt
+  checkpoint: ${env:DATA}/interim/ctorgans/models/default_ctorgans/11_MED-161/checkpoints/epoch=294.ckpt
 

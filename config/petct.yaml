@@ -43,4 +43,4 @@ nora:
   nora_study: 0001
   nora_date: 20200701
   nora_png: True
-  nora_organs: /mnt/qdata/raheppt1/data/tumorvolume/processed/ctorgans/ctorgans_petct.zarr
+  nora_organs: ${env:DATA}/processed/ctorgans/ctorgans_petct.zarr

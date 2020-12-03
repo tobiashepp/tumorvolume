@@ -1,4 +1,5 @@
 # ct organ prediction (validation datasets)
+# depricated!!!
 data_path: /mnt/qdata/raheppt1/data/tumorvolume/interim/ctorgans/ctorgans.h5 
 image_group: images
 test_set: /mnt/qdata/raheppt1/data/tumorvolume/interim/ctorgans/keys/ctorgans_test0.dat
